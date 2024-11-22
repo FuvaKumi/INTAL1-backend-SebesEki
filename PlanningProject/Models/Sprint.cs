@@ -1,6 +1,4 @@
-﻿using PlanningProject.Models;
-
-namespace PlanningProject.Models
+﻿namespace PlanningProject.Models
 {
 
     public class Sprint
