@@ -31,5 +31,16 @@ namespace PlanningProject.Models
         {
             return (double)LocalUsers.Select(x => x.Card).Average();
         }
+
+        /// <summary>
+        /// Sets every<c>LocalUser.Card</c>to<c>null</c>.
+        /// </summary>
+        public void ResetCards()
+        {
+            foreach (var user in LocalUsers)
+            {
+                user.Card = null;
+            }
+        }
     }
 }
