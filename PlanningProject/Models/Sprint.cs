@@ -14,15 +14,7 @@ namespace PlanningProject.Models
         public string CreatedDate { get; set; }
         public int OriginBoardId { get; set; }
         public string Goal { get; set; }
-        public int MaxPlayers { get; set; } = 10;
-        public List<LocalUser>? LocalUsers { get; set; }
-        public int UserCount { get; set; } = 0;
-
-        public void updateUserCount()
-        {
-            UserCount = LocalUsers.Count;
-        }
-
+        public bool IsCompleted { get; set; } // hasznos, ha nem szeretnénk megjeleníteni a listában, ha már történt rá szavazás
     }
 
     public class SprintsResponse
@@ -33,7 +25,4 @@ namespace PlanningProject.Models
         public bool IsLast { get; set; }
         public List<Sprint> Values { get; set; }
     }
-
-
-
 }
